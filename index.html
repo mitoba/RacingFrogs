@@ -1,0 +1,62 @@
+﻿<html ng-app="racingFrogs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Racing Frogs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css"/>
+</head>
+
+<body ng-controller="MainController as vm">
+    <div class="panel panel-default">
+        <div class="panel-heading">Racing Frogs</div>
+        <img src="racingfrog.jpg" alt="Smiley face" height="250" width="250">
+        <div class="panel-body">
+            <table border="1" width=60% align="center">
+
+                <tr ng-repeat="frog in vm.frogs">
+                    <td class="punteado" width="50">
+                        <p>{{frog.name}}</p>
+                    </td>
+                    <td class="punteado" width="250">
+                        <p align="left">||Start.</p>
+                        <div class="frog" style="margin-left:{{frog.positionx}}%" >
+                            <img src="frog.jpg" alt="Smiley face" height="70" width="70">
+                        </div>
+
+                        <p align="right">||Finish.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <span class="btn btn-default" ng-click="vm.race()">Start Race</span>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Fun with Joe and Bob
+            </div>
+            <div class="panel-body">
+                <p>
+                    Joe has {{ vm.joe.cash }}
+                </p>
+                <p>
+                    Bob has {{ vm.bob.cash }}
+                </p>
+                <p>
+                    The bank has {{ vm.bank }}
+                </p>
+            </div>
+            <div class="panel-footer">
+                <span class="btn btn-default" ng-click="vm.giveMoneyToJoe()">Give $10 to Joe</span>
+                <span class="btn btn-default" ng-click="vm.receiveMoneyFromBob()">Receive $5 from Bob</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

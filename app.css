@@ -1,0 +1,14 @@
+.punteado {
+  border-style: dotted;
+   border-width: 1px;
+   border-color: black;
+   background-color: darkgray;
+   font-family: verdana, arial;
+   font-size: 10pt;
+} 
+
+.frog {
+ background-color: green;
+width: 80px;
+height:80px; 
+}
