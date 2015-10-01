@@ -8,7 +8,7 @@ function MainController() {
     vm.joe = new Guy("Joe", 100);
     vm.bob = new Guy("Bob", 150);
     vm.bank = 200;
-    vm.frogs = [new Frog("", 0), new Frog("", 0), new Frog("", 0), new Frog("", 0)];
+    vm.frogs = [new Frog("Job", 0), new Frog("Juan", 0), new Frog("Felipe", 0), new Frog("Ramon", 0)];
 
     function Frog(name, positionx) {
         this.name = name;
